@@ -11,10 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $var = $_POST[];
-        $var2 = $_POST[];
-        $var3 = $_POST[];
-        $var4 = $_POST[];
+        $var = $_POST['var'];
+        $var2 = $_POST['var2'];
+        $var3 = $_POST['var3'];
+        $var4 = $_POST['var4'];
 
         $sql = 'INSERT INTO tabela (var, var2, var3, var4) VALUES(:var, :var2, :var3, :var4)';
 
