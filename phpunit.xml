@@ -1,0 +1,15 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="Teste Conexao com o banco">
+        <!-- Suite de Testes de Conexão -->
+            <file>TesteUnitario\TesteDeConexao\TesteDeConexao.php</file>
+        </testsuite>
+        <testsuite name="Teste do Crud">
+        <!-- Suite de Testes do Crud -->
+            <file>TesteUnitario\TesteDoCrud\TesteDelete.php</file>
+            <file>TesteUnitario\TesteDoCrud\TesteGet.php</file>
+            <file>TesteUnitario\TesteDoCrud\TestePost.php</file>
+            <file>TesteUnitario\TesteDoCrud\TestePut.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
