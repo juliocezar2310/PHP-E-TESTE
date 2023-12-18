@@ -8,11 +8,11 @@ class DatabaseInsertionTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -43,11 +43,11 @@ class DatabaseInsertionTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

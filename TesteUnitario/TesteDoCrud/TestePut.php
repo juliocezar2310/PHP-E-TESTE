@@ -8,7 +8,7 @@ class DatabaseUpdateTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         // Simulando dados para atualização
@@ -21,7 +21,7 @@ class DatabaseUpdateTest extends TestCase
         ];
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -51,7 +51,7 @@ class DatabaseUpdateTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         // Simulando dados para atualização com um ID inválido
@@ -64,7 +64,7 @@ class DatabaseUpdateTest extends TestCase
         ];
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

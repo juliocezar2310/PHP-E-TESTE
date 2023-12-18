@@ -8,7 +8,7 @@ class DatabaseDeleteTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         // Simulando dados para exclusão
@@ -17,7 +17,7 @@ class DatabaseDeleteTest extends TestCase
         ];
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -39,7 +39,7 @@ class DatabaseDeleteTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         // Simulando dados para exclusão com um ID inválido
@@ -48,7 +48,7 @@ class DatabaseDeleteTest extends TestCase
         ];
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

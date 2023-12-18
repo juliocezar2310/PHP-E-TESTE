@@ -8,14 +8,14 @@ class DatabaseGetTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         // Simulando um ID válido para busca
         $_GET['id'] = 1;
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -39,14 +39,14 @@ class DatabaseGetTest extends TestCase
     {
         $host = "localhost";
         $db = "base_php";
-        $user = "postgre";
+        $user = "root";
         $pass = "";
 
         // Simulando um ID inválido para busca
         $_GET['id'] = 9999;
 
         try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
